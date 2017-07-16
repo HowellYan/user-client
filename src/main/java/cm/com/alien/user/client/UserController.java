@@ -1,5 +1,8 @@
 package cm.com.alien.user.client;
 
+import cn.com.alien.user.api.UserService;
+import cn.com.alien.user.api.req.UserReq;
+import cn.com.alien.user.api.req.base.BaseReq;
 import org.mockito.cglib.beans.BeanMap;
 import org.spring.boot.thrift.client.annotation.ThriftClient;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +18,7 @@ import java.util.Map;
 @RestController
 public class UserController {
 
-    @ThriftClient(serviceId = "thriftserver", path = "/userService")
+    @ThriftClient(serviceId = "userServer", path = "/userService")
     UserService.Client UserServiceClient;
 
     @RequestMapping(method = RequestMethod.GET, value = "/userLogin")
