@@ -30,7 +30,7 @@ public class UserController {
         userReq.setUserIp("123456");
         userReq.setUserMac("123456");
         userReq.setBaseReq(new BaseReq().setIp("123456").setKeep("123456"));
-        UserServiceClient.userLogin(userReq);
+        //UserServiceClient.userLogin(userReq);
         o = BeanMap.create(UserServiceClient.userLogin(userReq).getBaseResp());
         return o;
     }
